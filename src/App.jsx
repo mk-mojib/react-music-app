@@ -210,7 +210,7 @@ return (
     </div>
     <div className="now-playing">
       {playlist.length > 0 && (
-        <p className="current-track">Now Playing: {playlist[currentTrackIndex].name}</p>
+        <p className="current-track"><b>Now Playing:</b> {playlist[currentTrackIndex].name}</p>
       )}
     </div>
     <input

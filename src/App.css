@@ -1,21 +1,3 @@
-.file-input-container {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-}
-
-.choose-file-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 14px;
-  cursor: pointer;
-  background-color: #2196F3;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  outline: none;
-}
-
 .choose-file-input {
   font-size: 100px;
   position: absolute;
@@ -25,12 +7,8 @@
   cursor: pointer;
 }
 
-.choose-file-button:hover {
-  background-color: red;
-}
-
 .music-player-container {
-  max-width: 80%;
+  max-width: 100% ;
   margin: auto;
   padding: 20px;
   background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%) ;
@@ -44,21 +22,12 @@
   height: 30px;
   background: #909090;
   color: #ffffff;
-  position: relative;
-  animation: MyDiv 25s infinite ease-in;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
   margin-top: 30px;
   margin-bottom: 30px;
-}
-.alt-rev {
-  animation-direction: alternate-reverse;
-}
-@keyframes MyDiv {
-  0%   {left: 0px; top: 0px;}
-  100%  {left: 130px; top: 0px;}
 }
 
 .player-controls {
@@ -86,9 +55,6 @@ button:hover {
 button:active {
   color: #000;
 }
-.uploaded-songs {
-  color: #000 ;
-}
 
 /* New style */
 
@@ -104,7 +70,6 @@ button:active {
 .playlist ul {
   list-style: none;
   padding: 0;
-
 }
 
 .playlist li {
@@ -131,3 +96,98 @@ button:active {
   border-radius: 10px;
 }
 
+/* Media */
+@media screen and (max-width: 375px)
+{
+    .music-player-container {
+      max-width: 100%;
+    }
+    .playlist ul {
+      text-overflow: ellipsis;
+    }
+    .choose-file-input {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+      font-size: 10px;
+      float: right; 
+      text-overflow: ellipsis;
+    }
+
+  .player-info {
+    max-width: 100%;
+    height: 12px;
+    border-radius: 12px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+  }
+  button {
+    padding: 06px;
+    font-size: 10px;
+    font-weight: 400;
+  }
+  .player-controls {
+    gap: 5px;
+  }
+  .playlist li {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    font-size:  10px;
+    overflow: scroll;
+    white-space: wrap;
+  }
+  .current-track {
+    font-size: 10px;
+    font-weight: 300;
+    overflow: hidden;
+    white-space: wrap;
+    }
+}
+
+@media  screen and (max-width: 600px)
+{
+    .music-player-container {
+      max-width: 100% ;
+    }
+    .choose-file-input {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100% ;
+      font-size: 80px;
+      float: right; 
+    }
+
+  .player-info {
+    max-width: 90%;
+    height: 17px;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  button {
+    padding: 08px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .player-controls {
+    gap: 45px;
+  }
+  .playlist li {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    font-size:  12px;
+    overflow: hidden;
+    white-space: wrap;
+  }
+  .current-track {
+    font-weight: 300;
+    overflow: hidden;
+    white-space: wrap;
+  }
+}
